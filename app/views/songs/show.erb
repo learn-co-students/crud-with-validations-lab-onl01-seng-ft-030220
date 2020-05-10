@@ -1,0 +1,36 @@
+<h1>Browse the songs:</h1>
+<div class="index-form-wrapper">
+    <table class="zebra"> 
+        <col>
+        <col>
+        <col>
+        <col>
+        <thead> 
+            <tr> 
+                <th>Song Title</th>
+                <th>Release Year</th>
+                <th>Released</th>
+                <th>Genre</th>
+                <th>Artist Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= @song.title %></td>
+                <td><%= @song.release_year %></td>
+                <td><%= @song.released %></td>
+                <td><%= @song.genre %></td>
+                <td><%= @song.artist_name %></td>
+            </tr>
+        </tbody>
+    </table>
+        
+        <% @songs.each do | song | %>
+            <div class="song">
+                <span><%= song.title %></span>
+                <%= button_to "Delete Song", song_path(@song), method::delete %>
+            </div>
+        <% end %>
+</div>
+    
+  
