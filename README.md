@@ -48,3 +48,4 @@ Use the `resource` generator, **not** the `scaffold` generator
 
 [link_to]: http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to
 [assets]: http://apidock.com/rails/v4.2.1/ActionView/Helpers/AssetTagHelper/javascript_include_tag
+rails g resource Song title:string released:boolean release_year:integer artist_name:string genre:string --no-test-framework
